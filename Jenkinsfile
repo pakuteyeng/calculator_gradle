@@ -4,12 +4,12 @@ pipeline {
 	stages {
 		stage("Compile") {
 			steps {
-				bat "./gradlew compileJava"
+				sh "./gradlew compileJava"
 			}
 		}
 		stage("Unit test") {
 			steps {
-				bat "./gradlew test"
+				sh "./gradlew test"
 			}
 		}
 	}
