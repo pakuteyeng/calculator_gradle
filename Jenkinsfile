@@ -22,10 +22,10 @@ pipeline {
 		}
 		stage("Commit") {
 			steps {
-				sh "./git add --all"
-				sh "./git commit -m ."
-				sh "./git branch -M master"
-				sh "./git push -u origin master"
+				sh "git add --all"
+				sh "git commit -m ."
+				sh "git branch -M master"
+				sh "git push -u origin master"
 			}
 		}
 
