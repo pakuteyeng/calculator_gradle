@@ -20,6 +20,15 @@ pipeline {
 				sh "./gradlew build"
 			}
 		}
+		stage("Commit") {
+			steps {
+                sh "chmod +x git"
+				sh "./git add --all"
+				sh "./git commit -m ."
+				sh "./git branch -M master"
+				sh "./git push -u origin master"
+			}
+		}
 
 	}
 }
